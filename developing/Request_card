@@ -1,0 +1,89 @@
+import requests
+import pandas as pd
+import numpy as np
+from pandas.core.frame import DataFrame
+import matplotlib.pyplot as plt
+from statsmodels.formula.api import ols
+from sklearn.linear_model import LinearRegression
+
+r_card = requests.get("http://34.64.187.187:1337/credits?")
+df_covid = pd.DataFrame({'Month':[202001, 202002, 202003, 202004, 202005, 202006, 202007, 202008, 202009, 202010, 202011, 202012, 202101, 202102, 202103, 202104], 'Confirmed':[11, 3139, 6636, 979, 703, 1331, 1506, 5642, 3865, 2699, 7688, 26528, 17471, 11467, 13415, 18919]})
+list_card = r_card.json()
+df_card_pre = pd.DataFrame(list_card)
+list_covid = [0, 0, 0, 0, 0, 0, 0, 0, 11, 3139, 6636, 979, 703, 1331]
+df_card = df_card_pre.iloc[:,[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]]
+df_card.insert(2, 'Confirmed_covid19', list_covid)
+
+x=df_card["Confirmed_covid19"]
+y1=df_card["C1"]
+y2=df_card["C2"]
+y3=df_card["C3"]
+y4=df_card["C4"]
+y5=df_card["C5"]
+y6=df_card["C6"]
+y7=df_card["C7"]
+y8=df_card["C8"]
+y9=df_card["C9"]
+y10=df_card["C10"]
+y11=df_card["C11"]
+y12=df_card["C12"]
+y13=df_card["C13"]
+
+line_fitter1 = LinearRegression()
+line_fitter1.fit(x.values.reshape(-1,1), y1)
+line_fitter2 = LinearRegression()
+line_fitter2.fit(x.values.reshape(-1,1), y2)
+line_fitter3 = LinearRegression()
+line_fitter3.fit(x.values.reshape(-1,1), y3)
+line_fitter4 = LinearRegression()
+line_fitter4.fit(x.values.reshape(-1,1), y4)
+line_fitter5 = LinearRegression()
+line_fitter5.fit(x.values.reshape(-1,1), y5)
+line_fitter6 = LinearRegression()
+line_fitter6.fit(x.values.reshape(-1,1), y6)
+line_fitter7 = LinearRegression()
+line_fitter7.fit(x.values.reshape(-1,1), y7)
+line_fitter8 = LinearRegression()
+line_fitter8.fit(x.values.reshape(-1,1), y8)
+line_fitter9 = LinearRegression()
+line_fitter9.fit(x.values.reshape(-1,1), y9)
+line_fitter10 = LinearRegression()
+line_fitter10.fit(x.values.reshape(-1,1), y10)
+line_fitter11 = LinearRegression()
+line_fitter11.fit(x.values.reshape(-1,1), y11)
+line_fitter12 = LinearRegression()
+line_fitter12.fit(x.values.reshape(-1,1), y12)
+line_fitter13 = LinearRegression()
+line_fitter13.fit(x.values.reshape(-1,1), y13)
+
+
+plt.plot(x,line_fitter1.predict(x.values.reshape(-1,1)))
+plt.plot(x,line_fitter2.predict(x.values.reshape(-1,1)))
+plt.plot(x,line_fitter3.predict(x.values.reshape(-1,1)))
+plt.plot(x,line_fitter4.predict(x.values.reshape(-1,1)))
+plt.plot(x,line_fitter5.predict(x.values.reshape(-1,1)))
+plt.plot(x,line_fitter7.predict(x.values.reshape(-1,1)))
+plt.plot(x,line_fitter8.predict(x.values.reshape(-1,1)))
+plt.plot(x,line_fitter9.predict(x.values.reshape(-1,1)))
+plt.plot(x,line_fitter10.predict(x.values.reshape(-1,1)))
+plt.plot(x,line_fitter11.predict(x.values.reshape(-1,1)))
+plt.plot(x,line_fitter12.predict(x.values.reshape(-1,1)))
+plt.plot(x,line_fitter13.predict(x.values.reshape(-1,1)))
+
+plt.plot(x,y1,'o', label='C1')
+plt.plot(x,y2,'o', label='C2')
+plt.plot(x,y3,'o', label='C3')
+plt.plot(x,y4,'o', label='C4')
+plt.plot(x,y5,'o', label='C5')
+plt.plot(x,y6,'o', label='C6')
+plt.plot(x,y7,'o', label='C7')
+plt.plot(x,y8,'o', label='C8')
+plt.plot(x,y9,'o', label='C9')
+plt.plot(x,y10,'o', label='C10')
+plt.plot(x,y11,'o', label='C11')
+plt.plot(x,y12,'o', label='C12')
+plt.plot(x,y13,'o', label='C13')
+
+plt.show()
+
+

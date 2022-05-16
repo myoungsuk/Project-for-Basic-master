@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome!</title>
+
+  <!-- Google Font: Source Sans Pro(css 파일 들어가는 곳)-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="static/plugins/fontawesome-free/css/all.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="static/dist/css/adminlte.min.css">
+</head>
+
+<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+
+  <style type = "text/css">
+  .jumbotron{
+    background-image: url('static/dist/img/background1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-shadow:black 0.2em 0.2em 0.2em;
+    color: white;
+  }
+    </style>
+
+
+<nav class=" navbar navbar-expand navbar-dark">
+  
+  <!-- Left navbar links -->
+  
+   
+    <a href="/" class="brand-link" style="color:white">
+      <img src="static/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light ">통계청</span>
+    </a>
+
+
+    
+    
+    
+
+  <!-- Right navbar links -->
+  
+</nav>
+
+<hr>
+
+ <div class = "container">
+     <div class = "jumbotron">
+         <h1 class = "text-center">Welcome to COVID-19 Statistics Website</h1>
+         <p class = "text-center">Our website offers some COVID-19 graphs with predictions</p>
+         <p class = "text-center"><a class= "btn btn-primary btn-lg" href = "/credit" role = "button">그래프 보러 가기</a></p>
+     </div>
+ </div>
+
+ <hr>
+ <div style="padding-left: 200px;">
+  <div class="row">
+    <div class="col-md-4">
+       <h7 style = "text-align: center;">궁금한 분야의 통계를 살펴보세요!</h7>
+    </div>
+  </div>
+</div>
+ <hr>
+
+<div style="padding-left: 200px;">
+  <div class = "row">
+    <div class = "col-md-4">
+      <h5>코로나 19 이후 신용카드소비동향</h5> 
+      <p>신용카드 통계로 알아보는 소비동향 변화</p>
+      <p><a class="btn btn-default" href="/credit">자세히 알아보기</a></p>
+    </div>
+    <div class = "col-md-4">
+      <h5>고급음식점 매출량</h5> 
+      <p>평균 단가 5만원 이상의 고급 음식점 매출 변화</p>
+      <p><a class="btn btn-default" href="/rest">자세히 알아보기</a></p>
+    </div>
+    <div class = "col-md-4">
+      <h5>코로나19 확진자 수</h5> 
+      <p>COVID-19 확진자 수를 확인</p>
+      <p><a class="btn btn-default" href="/covid">자세히 알아보기</a></p>
+    </div>
+    <div class = "col-md-4">
+      <h5>코로나19 재택지수</h5> 
+      <p>얼마나 많은 사람들이 집에 있을까요?</p>
+      <p><a class="btn btn-default" href="/home">자세히 알아보기</a></p>
+    </div>
+    <hr>
+  </div>
+</div>
+
+<hr>
+<footer style="background-color: #2e2c2c; color: #ffffff">
+  <div class = "container">
+    <br>
+     <div class="row">
+      <div class = "col-sm-3" style = "text-align: center;"><h8>Copyright &copy; 2021</h8><hr><h8>강명석 나동규 정준호 조준화</h8>
+      </div> 
+      <div class="col-sm-4"><h8>소개</h8>
+       <hr>
+       <p>데이터 모음 포털사이트를 운영하고 있습니다</p></div>
+     
+     
+     
+     <div class="col-sm-2"><h5 style="text-align: center;"><span class="glyphicon glyphicon-ok"></span>by 통계청</h5></div>
+     </div>
+  </div>
+</div>
+</footer>
+<hr>
+
+
+<!-- REQUIRED SCRIPTS (함수 들어가는 곳)-->
+<!-- jQuery -->
+<script src="static/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="static/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="static/dist/js/adminlte.js"></script>
+
+<!-- PAGE PLUGINS -->
+<!-- jQuery Mapael -->
+<script src="static/plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
+<script src="static/plugins/raphael/raphael.min.js"></script>
+<script src="static/plugins/jquery-mapael/jquery.mapael.min.js"></script>
+<script src="static/plugins/jquery-mapael/maps/usa_states.min.js"></script>
+<!-- ChartJS -->
+<script src="static/plugins/chart.js/Chart.min.js"></script>
+
+<!-- AdminLTE for demo purposes -->
+<script src="static/dist/js/demo.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="static/dist/js/pages/dashboard2.js"></script>
+</body>
+</html>
