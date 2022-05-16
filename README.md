@@ -1,4 +1,4 @@
-# Project-for-Basic
+# data visualization website
 Team project of team 8. '통계청' in 'opensource basic project' class
 
 코로나19 통계 사이트입니다.
